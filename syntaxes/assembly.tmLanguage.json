@@ -3,18 +3,32 @@
 	"name": "Sapi 8 bit Assembly Language",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
+		},
+		{
+			"include": "#op-code"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#hex-number"
+		},
+		{
+			"include": "#register"
+		},
+		{
+			"include": "#label"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.assembly",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+		"op-code": {
+			"patterns": [
+				{
+					"name": "keyword.control.assembly",
+					"match": "/\b(?:AND|OR|ADD|SUB|LW|SW|MOV|INP|JEQ|JNE|JGT|JLT|LW|SW|LI|JMP)\b/"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.assembly",
@@ -24,6 +38,38 @@
 				{
 					"name": "constant.character.escape.assembly",
 					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.control.assembly",
+					"match": "/;.*|#.*/"
+				}
+			]
+		},
+		"hex-number": {
+			"patterns": [
+				{
+					"name": "number.control.assembly",
+					"match": "/0[xX][0-9a-fA-F]+/"
+				}
+			]
+		},
+		"register": {
+			"patterns": [
+				{
+					"name": "variable.control.assembly",
+					"match": "/\b(?:R0|R1|R2|R3|INP)\b/"
+				}
+			]
+		},
+		"label": {
+			"patterns": [
+				{
+					"name": "label.control.assembly",
+					"match": "/.+?(?<=:)/"
 				}
 			]
 		}
