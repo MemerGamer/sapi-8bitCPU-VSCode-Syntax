@@ -1,6 +1,6 @@
 ## Syntax Highlighting for the Sapi 8-bit assembly language in VSCode.
 
-![Demo](https://github.com/MemerGamer/sapi-8bitCPU-VSCode-Syntax/tree/master/blob/img/demo.png?raw=true)
+![Demo](https://github.com/MemerGamer/sapi-8bitCPU-VSCode-Syntax/blob/master/img/demo.png?raw=true)
 
 ### 1.0.0
 
