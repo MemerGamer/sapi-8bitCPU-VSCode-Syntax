@@ -2,7 +2,7 @@
     "name": "sapicpu-assembly-syntax",
     "displayName": "SapiCPU Syntax",
     "description": "Sapi 8 bit CPU Assembly Language",
-    "publisher": "Kovács Bálint-Hunor",
+    "publisher": "kovacsbalinthunor",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.69.0"
