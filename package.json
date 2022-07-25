@@ -1,0 +1,25 @@
+{
+    "name": "asm",
+    "displayName": "SapiCPU Syntax",
+    "description": "Sapi 8 bit CPU Assembly Language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "assembly",
+            "aliases": ["Sapi 8 bit Assembly Language", "assembly"],
+            "extensions": [".asm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "assembly",
+            "scopeName": "source.asm",
+            "path": "./syntaxes/assembly.tmLanguage.json"
+        }]
+    }
+}
