@@ -6,69 +6,62 @@
 			"include": "#comments"
 		},
 		{
-			"include": "#op-code"
-		},
-		{
 			"include": "#strings"
 		},
 		{
-			"include": "#hex-number"
+			"include": "#named-label"
 		},
 		{
-			"include": "#register"
+			"include": "#numeric-label"
 		},
 		{
-			"include": "#label"
+			"include": "#constant-numeric-binary"
+		},
+		{
+			"include": "#constant-numeric-decimal"
+		},
+		{
+			"include": "#constant-numeric-hex"
+		},
+		{
+			"include": "#mnemonics"
+		},
+		{
+			"include": "#addressing-modes"
 		}
 	],
 	"repository": {
-		"op-code": {
-			"patterns": [
-				{
-					"name": "keyword.control.assembly",
-					"match": "/\b(?:AND|OR|ADD|SUB|LW|SW|MOV|INP|JEQ|JNE|JGT|JLT|LW|SW|LI|JMP)\b/"
-				}
-			]
-		},
 		"strings": {
-			"patterns": [
-				{
-					"name": "string.assembly",
-					"match": "(\"|').*?(\"|')"
-				}
-			]
+			"name": "string.quoted.double.asm",
+			"match": "\\\"(\\.|[^\\\"])*\\\""
 		},
 		"comments": {
-			"patterns": [
-				{
-					"name": "punctuation.definition.comment.assembly",
-					"match": "/;.*|#.*/"
-				}
-			]
+			"name": "comment.line.asm",
+			"match": "(;.*|#.*)$"
 		},
-		"hex-number": {
-			"patterns": [
-				{
-					"name": "constant.character.hexadecimal.assembly",
-					"match": "/0[xX][0-9a-fA-F]+/"
-				}
-			]
+		"named-label": {
+			"name": "entity.name.function.asm",
+			"match": "^(\\.?[A-Za-z_][A-Za-z0-9_]*)"
 		},
-		"register": {
-			"patterns": [
-				{
-					"name": "variable.parameter.register.assembly",
-					"match": "/\b(?:R0|R1|R2|R3|INP)\b/"
-				}
-			]
+		"numeric-label": {
+			"name": "entity.name.function.asm",
+			"match": "^(([0-9]+)\\$)"
 		},
-		"label": {
-			"patterns": [
-				{
-					"name": "entity.name.function.assembly",
-					"match": "/.+?(?<=:)/"
-				}
-			]
+		"constant-numeric-binary": {
+			"name": "constant.numeric.asm",
+			"match": "(\\%[01]+)"
+		},
+		"constant-numeric-hex": {
+			"name": "constant.numeric.asm",
+			"match": "(\\$[0-9a-fA-F]+)"
+		},
+		"mnemonics": {
+			"match": "\\b(?i:AND|OR|ADD|SUB|LW|SW|MOV|INP|JEQ|JNE|JGT|JLT|LW|SW|LI|JMP)\\b",
+			"name": "keyword.other.asm.mnemonic"
+		},
+		"addressing-modes": {
+			"match": "\\b(?i:R0|R1|R2|R3|INP)\\b",
+			"name": "support.variable.asm"
 		}
 	},
 	"scopeName": "source.asm"
