@@ -4,7 +4,7 @@
     "description": "Sapi 8 bit CPU Assembly Language",
     "icon": "img/SapiCPU_Syntax.png",
     "publisher": "kovacsbalinthunor",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "engines": {
         "vscode": "^1.69.0"
     },
