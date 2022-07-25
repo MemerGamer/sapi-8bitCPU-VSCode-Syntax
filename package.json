@@ -1,7 +1,8 @@
 {
-    "name": "asm",
+    "name": "sapicpu-assembly-syntax",
     "displayName": "SapiCPU Syntax",
     "description": "Sapi 8 bit CPU Assembly Language",
+    "publisher": "Kovács Bálint-Hunor",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.69.0"
@@ -10,16 +11,30 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "assembly",
-            "aliases": ["Sapi 8 bit Assembly Language", "assembly"],
-            "extensions": [".asm"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "assembly",
-            "scopeName": "source.asm",
-            "path": "./syntaxes/assembly.tmLanguage.json"
-        }]
-    }
+        "languages": [
+            {
+                "id": "assembly",
+                "aliases": [
+                    "Sapi 8 bit Assembly Language",
+                    "assembly"
+                ],
+                "extensions": [
+                    ".asm"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "assembly",
+                "scopeName": "source.asm",
+                "path": "./syntaxes/assembly.tmLanguage.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MemerGamer/sapi-8bitCPU-VSCode-Syntax.git"
+    },
+    "homepage": "https://github.com/MemerGamer/sapi-8bitCPU-VSCode-Syntax#readme"
 }
