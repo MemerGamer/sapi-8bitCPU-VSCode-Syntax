@@ -2,6 +2,7 @@
     "name": "sapicpu-assembly-syntax",
     "displayName": "SapiCPU Syntax",
     "description": "Sapi 8 bit CPU Assembly Language",
+    "icon": "img/SapiCPU_Syntax.png",
     "publisher": "kovacsbalinthunor",
     "version": "0.0.1",
     "engines": {
