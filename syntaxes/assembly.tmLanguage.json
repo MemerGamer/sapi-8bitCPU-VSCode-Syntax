@@ -31,20 +31,17 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.assembly",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.assembly",
-					"match": "\\\\."
+					"name": "string.assembly",
+					"match": "(\"|').*?(\"|')"
 				}
 			]
 		},
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.control.assembly",
+					"name": "punctuation.definition.comment.assembly",
 					"match": "/;.*|#.*/"
 				}
 			]
@@ -52,7 +49,7 @@
 		"hex-number": {
 			"patterns": [
 				{
-					"name": "number.control.assembly",
+					"name": "constant.character.hexadecimal.assembly",
 					"match": "/0[xX][0-9a-fA-F]+/"
 				}
 			]
@@ -60,7 +57,7 @@
 		"register": {
 			"patterns": [
 				{
-					"name": "variable.control.assembly",
+					"name": "variable.parameter.register.assembly",
 					"match": "/\b(?:R0|R1|R2|R3|INP)\b/"
 				}
 			]
@@ -68,7 +65,7 @@
 		"label": {
 			"patterns": [
 				{
-					"name": "label.control.assembly",
+					"name": "entity.name.function.assembly",
 					"match": "/.+?(?<=:)/"
 				}
 			]
